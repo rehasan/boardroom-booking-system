@@ -1,0 +1,16 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="BoardroomBookingSystem" type="Application" factoryName="Application" nameIsGenerated="true">
+    <option name="MAIN_CLASS_NAME" value="com.example.boardroombookingsystem.BoardroomBookingSystem" />
+    <module name="boardroom-booking-system.main" />
+    <option name="PROGRAM_PARAMETERS" value="-f batch-01.txt" />
+    <extension name="coverage">
+      <pattern>
+        <option name="PATTERN" value="com.example.boardroombookingsystem.*" />
+        <option name="ENABLED" value="true" />
+      </pattern>
+    </extension>
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>
