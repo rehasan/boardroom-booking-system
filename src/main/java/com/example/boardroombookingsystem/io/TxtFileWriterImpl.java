@@ -1,11 +1,9 @@
 package com.example.boardroombookingsystem.io;
 
 import java.io.BufferedWriter;
-import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.InputStream;
 import java.io.OutputStream;
 import java.io.OutputStreamWriter;
 import java.io.Writer;
@@ -44,7 +42,7 @@ public class TxtFileWriterImpl {
                 bufferedWriter.write(entry.getKey().toString());
                 bufferedWriter.newLine();
 
-                for (Meeting meeting: entry.getValue()) {
+                for (Meeting meeting : entry.getValue()) {
                     bufferedWriter.write(
                         String.format("%s %s %s",
                             meeting.getMeetingStartDateTime().toLocalTime(),

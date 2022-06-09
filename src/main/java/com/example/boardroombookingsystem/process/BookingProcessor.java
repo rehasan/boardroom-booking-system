@@ -76,7 +76,7 @@ public class BookingProcessor {
                 var processedMeetingsOrderByStartDate =
                     processedMeetingsGroupByStartDate.entrySet().stream()
                         .sorted(Map.Entry.comparingByKey())
-                        .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue, (e1,e2) -> e1, LinkedHashMap::new));
+                        .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue, (e1, e2) -> e1, LinkedHashMap::new));
 
                 // File Writer set output stream writing to the a file
                 // Output file path = output

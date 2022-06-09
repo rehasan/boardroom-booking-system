@@ -46,7 +46,8 @@ public class CommandLineProcessor {
             + "\nThe above arguments may be in any order.";
         String footer = "##################################################";
         HelpFormatter formatter = new HelpFormatter();
-        formatter.printHelp("java -jar ./build/libs/boardroom-booking-system-1.0-SNAPSHOT.jar com.example.boardroombookingsystem.BoardroomBookingSystem",
+        formatter.printHelp(
+            "java -jar ./build/libs/boardroom-booking-system-1.0.0-SNAPSHOT.jar com.example.boardroombookingsystem.BoardroomBookingSystem",
             header, options, footer, true);
 
         try {

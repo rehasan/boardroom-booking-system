@@ -5,7 +5,6 @@ import java.time.LocalDateTime;
 public class Meeting implements Comparable<Meeting> {
     private final LocalDateTime requestSubmissionDateTime;
     private final String employeeId;
-
     private LocalDateTime meetingStartDateTime;
     private LocalDateTime meetingEndDateTime;
     private Integer meetingDuration;
@@ -15,7 +14,8 @@ public class Meeting implements Comparable<Meeting> {
         this.employeeId = employeeId;
     }
 
-    public Meeting(final LocalDateTime requestSubmissionDateTime, final String employeeId, final LocalDateTime meetingStartDateTime, final Integer meetingDuration) {
+    public Meeting(final LocalDateTime requestSubmissionDateTime, final String employeeId, final LocalDateTime meetingStartDateTime,
+                   final Integer meetingDuration) {
         this.requestSubmissionDateTime = requestSubmissionDateTime;
         this.employeeId = employeeId;
         this.meetingStartDateTime = meetingStartDateTime;

@@ -1,6 +1,7 @@
 # boardroom-booking-system
 
-Console application that provide a successful booking calendar as output, with bookings being grouped chronologically by day.
+Console application that provide a successful booking calendar as output, with bookings being grouped chronologically by
+day.
 
 ## PRE-REQUISITES
 
@@ -19,7 +20,7 @@ To start the console application run the following command:
 File directory is located under root of this project, and the directory is named `storage`.
 
 ```
-java -jar ./build/libs/boardroom-booking-system-1.0-SNAPSHOT.jar com.example.boardroombookingsystem.BoardroomBookingSystem -f batch-01.txt
+java -jar ./build/libs/boardroom-booking-system-1.0.0-SNAPSHOT.jar com.example.boardroombookingsystem.BoardroomBookingSystem -f batch-01.txt
 ```
 
 ### Test

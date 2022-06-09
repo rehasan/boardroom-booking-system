@@ -3,13 +3,19 @@ plugins {
 }
 
 group 'org.example'
-version '1.0-SNAPSHOT'
+version '1.0.0-SNAPSHOT'
 
 jar {
     manifest {
-        attributes(
-                'Main-Class': 'com.example.boardroombookingsystem.BoardroomBookingSystem'
-        )
+        attributes "Main-Class": "com.example.boardroombookingsystem.BoardroomBookingSystem"
+    }
+    from {
+        configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
+    } {
+        exclude "META-INF/*.SF"
+        exclude "META-INF/*.DSA"
+        exclude "META-INF/*.RSA"
+        exclude "META-INF/*.txt"
     }
 }
 
@@ -23,8 +29,8 @@ dependencies {
     implementation 'org.apache.commons:commons-lang3:3.12.0'
 
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
-    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
     testImplementation 'org.mockito:mockito-core:4.6.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
 }
 
 test {

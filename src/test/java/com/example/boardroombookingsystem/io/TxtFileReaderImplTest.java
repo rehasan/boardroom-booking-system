@@ -1,6 +1,12 @@
 package com.example.boardroombookingsystem.io;
 
 import java.io.ByteArrayInputStream;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import com.example.boardroombookingsystem.model.Boardroom;
 import com.example.boardroombookingsystem.model.FileExtensionType;
@@ -9,14 +15,10 @@ import com.example.boardroombookingsystem.model.Status;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
-import static org.junit.jupiter.api.Assertions.assertTrue;
-import static org.mockito.ArgumentMatchers.any;
-
 public class TxtFileReaderImplTest {
     private ByteArrayInputStream byteArrayInputStream;
     private FileReader fileReader;
+    private Path inputFile;
 
     @BeforeEach
     public void setUp() {
@@ -24,15 +26,16 @@ public class TxtFileReaderImplTest {
             "2011-03-17 10:17:06 EMP001\n" +
             "2011-03-21 09:00 2\n" +
             "2011-03-16 12:34:56 EMP002\n" +
-            "2011-03-21 09:00 2\n"+
+            "2011-03-21 09:00 2\n" +
             "2011-03-16 09:28:23 EMP003\n" +
             "2011-03-22 14:00 2\n" +
             "2011-03-17 10:17:06 EMP004\n" +
-            "2011-03-22 16:00 1\n"+
+            "2011-03-22 16:00 1\n" +
             "2011-03-15 17:29:12 EMP005\n" +
             "2011-03-21 16:00 3";
 
-        this.fileReader = new TxtFileReaderImpl(any());
+        this.inputFile = Paths.get("/test/batch-01.txt");
+        this.fileReader = new TxtFileReaderImpl(this.inputFile);
         this.byteArrayInputStream = new ByteArrayInputStream(inputFileContent.getBytes());
         this.fileReader.setInputStream(this.byteArrayInputStream);
     }

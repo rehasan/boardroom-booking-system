@@ -1,6 +1,5 @@
 package com.example.boardroombookingsystem;
 
-import java.io.FileNotFoundException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
@@ -30,7 +29,7 @@ public class BoardroomBookingSystem {
     public static final String STORAGE_OUTPUT_PATH = "storage/output/";
     public static final String STORAGE_OUTPUT_FILE_PREFIX = "processed-";
 
-    public static void main(final String[] args) throws FileNotFoundException {
+    public static void main(final String[] args) {
         // Extract the args
         CommandLineProcessor commandLineProcessor = new CommandLineProcessor(args);
         Result<Map<String, Object>> output = commandLineProcessor.process();
